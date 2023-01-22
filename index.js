@@ -16,14 +16,17 @@ form.addEventListener("submit", event => {
             console.log(answer+'=> ' +correctAnswer[index]);
             score += 1;
             questions[index].classList.add("correct");
-            questions[index].classList.remove("wrong");
         } else {
             questions[index].classList.add("wrong");
-            questions[index].classList.remove("correct");
         }
     });
 console.log(score);
     scrollTo(0, 0);
     result.classList.remove("hide");
     result.querySelector("p").textContent = `You scored ${score}/5!`;
+    //To disable form elements once submitted.
+    Array.from(form.elements).forEach(formElement => {
+        console.log(formElement);
+        formElement.disabled = true
+    });
 });
