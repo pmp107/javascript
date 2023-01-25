@@ -15,9 +15,14 @@
     list-style: none;
 }
 
-.quiz{
+.hide{
+    display: none !important;
+}
+
+.wrap{
     background-color: #0d479a;
-    padding: 30px;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .heading{
@@ -38,83 +43,97 @@
     text-align: center;
 }
 
-.result{
-    text-align: center;
+.task-manager{
     min-width: 350px;
-    max-width: 400px;
-    margin: 20px auto;
-    border-radius: 5px;
-    background-color: #ffffff;
-    box-shadow: var(--box-shadow);
-}
-
-.result p:first-child{
-    padding: 10px 20px;
-}
-
-.hide{
-    display: none;
-}
-
-.reload button{
-    background-color: #04AA6D;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 0px 0px 5px 5px;
-    width: 100%;
-    border: 0px;
-}
-
-.reload button:hover{
-    background-color: #03a369;
-    cursor: pointer;
-}
-
-.quiz-form{
-    max-width: 1000px;
+    max-width: 450px;
     margin: auto;
 }
 
-.question{
+.search-box, .task-box, .message{
     background-color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 20px 25px;
+    border-radius: 3px;
     margin: 20px 0px;
-    box-shadow: var(--box-shadow);
 }
 
-.question > * {
-    font-size: 18px;
+.search-box .search{
+    display: flex;
+    margin: 10px 0px;
 }
 
-.option {
-    margin-left: 10px;
+.search-box input{
+    border-radius: 3px;
+    width: 100%;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
 }
 
-.correct{
-    background-color: #c8ffdf;
-}
-
-.wrong{
-    background-color: #ffd1d1;
-}
-
-.submit{
-    text-align: center;
-    margin: 30px 0px;
-}
-
-.submit input {
-    background-color: #04AA6D;
-    padding: 5px 25px;
-    color: #ffffff;
-    font-size: 22px;
-    border-radius: 5px;
-    box-shadow: var(--box-shadow);
-    border: 0px;
-}
-
-.submit input:hover{
-    background-color: #03a369;
+.search-box i.reset{
+    font-size: 24px;
+    height: 100%;
+    padding: 10px 0px;
     cursor: pointer;
+}
+
+.task-box .tasks{
+    margin: 10px 0px;
+}
+
+.task-box li{
+    background-color: #f2f2f2;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-box span{
+    padding: 10px;
+}
+
+.task-box i.delete{
+    color: #ffffff;
+    background-color: #D82148;
+    border-radius: 0px 2px 2px 0px;
+    height: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.task-box .add{
+    display: flex;
+    margin: 30px 0px 10px 0px;
+}
+
+.task-box input[type="text"]{
+    border-radius: 3px;
+    width: 100%;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.task-box input[type="submit"]{
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #65C18C;
+    border: 0px;
+    border-radius: 3px;
+}
+
+.message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message .clear{
+    border: 0px;
+    background-color: #11468F;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 3px;
 }
