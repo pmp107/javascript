@@ -4,135 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMP - Daily Quiz</title>
+    <title>Kanban</title>
 
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-
     <main>
-        <section class="quiz">
-            <div class="heading">
-                <p class="title">PMP - Daily Quiz</p>
-                <p class="subtitle">Daily Quiz To Test Your Knowledge</p>
+        <div class="outer-wrap">
+            <div class="inner-wrap">
+                <section class="heading">
+                    <p class="title">Kanban</p>
+                    <p class="subtitle">Task tracking using kanban</p>
+                </section>
+                <section class="kanban">
+                    <div class="taskbox">
+                        <div class="title">
+                            <p>TODO</p>
+                            <span class="todo">2</span>
+                        </div>
+                        <div class="cards todo" data-id="0">
+                        </div>
+                        <form class="add">
+                            <input type="text" name="task" placeholder="New Task" autocomplete="off" maxlength="30">
+                            <button class="bi bi-plus" data-id="0" name="submit"></button>
+                        </form>
+                    </div>
+                    <div class="taskbox">
+                        <div class="title">
+                            <p>IN PROGRESS</p>
+                            <span class="pending">1</span>
+                        </div>
+                        <div class="cards pending" data-id="1">
+                        </div>
+                        <form class="add">
+                            <input type="text" name="task" placeholder="New Task" autocomplete="off" maxlength="30">
+                            <button class="bi bi-plus" data-id="1" name="submit"></button>
+                        </form>
+                    </div>
+                    <div class="taskbox">
+                        <div class="title">
+                            <p>COMPLETED</p>
+                            <span class="completed">2</span>
+                        </div>
+                        <div class="cards completed" data-id="2">
+                        </div>
+                        <form class="add">
+                            <input type="text" name="task" placeholder="New Task" autocomplete="off" maxlength="30">
+                            <button class="bi bi-plus" data-id="2" name="submit"></button>
+                        </form>
+                    </div>
+                </section>
             </div>
-
-            <div class="result hide">
-                <p></p>
-                <p class="reload">
-                    <button onclick="document.location.reload(true)">Try Again?</button>
-                </p>
-            </div>
-
-            <form class="quiz-form">
-                <div class="question">
-                    <p>1. Inside which HTML element do we put the JavaScript?</p>
-                    <div class="option">
-                        <input type="radio" name="q1" id="" value="A" checked>
-                        <label for="">js</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q1" id="" value="B">
-                        <label for="">javascript</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q1" id="" value="C">
-                        <label for="">scripting</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q1" id="" value="D">
-                        <label for="">script</label>
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>2. Where is the correct place to insert a JavaScript file?</p>
-                    <div class="option">
-                        <input type="radio" name="q2" id="" value="A" checked>
-                        <label for="">Inside head section</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q2" id="" value="B">
-                        <label for="">At the end of body section</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q2" id="" value="C">
-                        <label for="">After body section</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q2" id="" value="D">
-                        <label for="">None</label>
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>3. What is the correct syntax for referring to an external script called "index.js"?</p>
-                    <div class="option">
-                        <input type="radio" name="q3" id="" value="A" checked>
-                        <label for="">&#60;script name="index.js"&#62;</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q3" id="" value="B">
-                        <label for="">&#60;script href="index.js"&#62;</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q3" id="" value="C">
-                        <label for="">&#60;script src="index.js"&#62;</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q3" id="" value="D">
-                        <label for="">All</label>
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>4. How do you write "Hello World" in an alert box?</p>
-                    <div class="option">
-                        <input type="radio" name="q4" id="" value="A" checked>
-                        <label for="">pop("Hello World");</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q4" id="" value="B">
-                        <label for="">alert("Hello World");</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q4" id="" value="C">
-                        <label for="">popUp("Hello World");</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q4" id="" value="D">
-                        <label for="">alertUp("Hello World");</label>
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>5. Which operator is used to assign a value to a variable?</p>
-                    <div class="option">
-                        <input type="radio" name="q5" id="" value="A" checked>
-                        <label for="">-</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q5" id="" value="B">
-                        <label for="">*</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q5" id="" value="C">
-                        <label for="">+</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="q5" id="" value="D">
-                        <label for="">=</label>
-                    </div>
-                </div>
-                <div class="submit">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-        </section>
+        </div>
     </main>
 
-    <script src="./index.js"></script>
-    
+    <script type="module" src="./index.js"></script>
 </body>
 </html>
