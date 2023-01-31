@@ -82,7 +82,7 @@ taskbox.forEach(column => {
     });
     //END : Edit Task functionality
 
-    //START : Drag Task functionality
+    //START : Drag Task functionality. Adding event listener on each task.
     column.addEventListener("dragstart", event => {
         if(event.target.classList.contains("card")){
             event.target.classList.add("dragging");
