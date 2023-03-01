@@ -42,9 +42,9 @@ accordions.forEach(accordion => {
 function updateCarousel(){
     var swiper = new Swiper(".mySwiper", {
         //will be changing based on screen size.
-        slidesPerView: window.innerWidth < 960 ? 1 : 2,
-        spaceBetween: 30,
-        slidesPerGroup: window.innerWidth < 960 ? 1 : 1,
+        slidesPerView: window.innerWidth < 960 ? 1 : 2, // number of slides to show at a time.
+        spaceBetween: 150,
+        slidesPerGroup: window.innerWidth < 960 ? 1 : 1, //shift 1 slide per click
         loop: true,
         loopFillGroupWithBlank: true,
         pagination: {
